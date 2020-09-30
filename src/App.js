@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 
@@ -10,6 +10,20 @@ function App(props) {
 		title: '',
 		searchURL: ''
   });
+
+  const [movie, updateMovie] = useState({})
+  useEffect(() => {
+    query.searchURL.length > 0 &&
+      (async () => {
+        try {
+          const response = await fetch(query.searchURL);
+          const data = await response.json();
+          updateMovie({ ...movie, ...data });
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+  }, [query]);
   
   const handleChange = event => {
 		upDateQuery({ ...query, ...{ [event.target.id]: event.target.value } });
