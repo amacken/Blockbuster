@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
+
+import MovieInfo from "./components/MovieInfo";
 import './App.css';
 
 function App(props) {
@@ -50,7 +52,7 @@ function App(props) {
 				/>
 				<input type="submit" value="Search For Movie" />
 			</form>
-			<a href={query.searchURL}>{query.searchURL}</a>
+			<MovieInfo movie={movie} />
 		</div>
   );
 }
