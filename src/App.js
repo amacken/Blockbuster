@@ -52,7 +52,7 @@ function App(props) {
 				/>
 				<input type="submit" value="Search For Movie" />
 			</form>
-			<MovieInfo movie={movie} />
+			{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
 		</div>
   );
 }
