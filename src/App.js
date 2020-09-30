@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 
 function App(props) {
-  const [query, upDateQuery] = useState({
+  const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '930a61fb',
 		option: '&t=',
@@ -18,7 +18,8 @@ function App(props) {
         try {
           const response = await fetch(query.searchURL);
           const data = await response.json();
-          updateMovie({ ...movie, ...data });
+          await updateMovie({ ...movie, ...data });
+          await updateQuery({ ...query, searchURL: '', title: '' });
         } catch (error) {
           console.error(error);
         }
@@ -26,12 +27,12 @@ function App(props) {
   }, [query]);
   
   const handleChange = event => {
-		upDateQuery({ ...query, ...{ [event.target.id]: event.target.value } });
+		updateQuery({ ...query, ...{ [event.target.id]: event.target.value } });
 	};
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		upDateQuery({
+		updateQuery({
 			...query,
 			searchURL: `${query.baseURL}${query.apiKey}${query.option}${query.title}`
 		});
