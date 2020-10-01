@@ -3,6 +3,20 @@ import { Link } from 'react-router-dom';
 let endpoint = '/api';
 
 export default function Show(props) {
+    const [movie, updateMovie] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await fetch(`${endpoint}/${props.match.params.id}`);
+                const data = await response.json();
+                await updateMovie(data);
+            } catch (error) {
+                console.error(error);
+            }
+        })();
+    }, []);
+
     return (
         <div className="Page-wrapper">
             {Object.keys(movie).length > 0 ? (
