@@ -1,0 +1,24 @@
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.movie-info h1 {
+      color: green
+}
+
+.movie-info h4 {
+      color: blue;
+}
+
+.movie-info h3 {
+      color: red;
+}
+
+.movie-info img {
+      width: 100%;
+      max-width: 20rem;
+      max-height: 20rem;
+}

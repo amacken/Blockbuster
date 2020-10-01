@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 
-import MovieInfo from "./components/MovieInfo";
+import MovieInfo from "./components/MovieInfo/MovieInfo";
 import './App.css';
 
 function App(props) {
