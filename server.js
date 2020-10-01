@@ -16,3 +16,13 @@ mongoose.connect(MONGODB_URI, {
 db.on('open', () => {
     console.log('Mongo is Connected');
 });
+// Middleware
+app.use(express.json());
+app.use(express.static('public'));
+
+// Controller
+
+// Listener
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+});
