@@ -40,6 +40,13 @@ router.post('/', (req, res) => {
 });
 
 // Show
+router.get('/:id', (req, res) => {
+    Movie.findById(req.params.id, (error, foundMovie) => {
+        error ?
+        res.status(404).json(error):
+        res.status(200).json(foundMovie)
+    });
+});
 
 // export router
 module.exports = router;
