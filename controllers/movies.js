@@ -31,6 +31,13 @@ router.put('/:id', (req, res) => {
 });
 
 // Create
+router.post('/', (req, res) => {
+    Movie.create(req.body, (error, createdMovie) => {
+        error ?
+        res.status(404).json(error):
+        res.status(200).json(createdMovie)
+    });
+});
 
 // Show
 
