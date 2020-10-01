@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
+import Show from './components/Show/Show';
+import Edit from './components/Edit/Edit';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +17,16 @@ const routes = [
     path: '/',
     component: App,
     name: 'Home'
+  },
+  {
+    path: '/:id/edit',
+    component: Edit,
+    name: 'Edit'
+  },
+  {
+    path: '/:id',
+    component: Show,
+    name: 'Show'
   }
 ];
 
