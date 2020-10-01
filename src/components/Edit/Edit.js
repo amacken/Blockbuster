@@ -17,5 +17,23 @@ export default function Edit(props) {
         })();
     }, []);
 
-    
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(editMovie)
+            });
+            const data = await response.json();
+        } catch (error) {
+            console.error(error)
+        }
+    };
+
+    const handleChange = event => {
+        updateEditMovie({ ...editMovie, [event.target.id]: event.target.value });
+    };
 }
