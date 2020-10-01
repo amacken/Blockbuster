@@ -36,4 +36,19 @@ export default function Edit(props) {
     const handleChange = event => {
         updateEditMovie({ ...editMovie, [event.target.id]: event.target.value });
     };
+
+    return (
+        <div className="Page-wrapper">
+            {Object.keys(editMovie).length > 0 ? (
+				<div>
+					<h1>{editMovie.Title.toUpperCase()} Edit Page.</h1>
+				</div>
+			) : (
+				<h1>Nothing found on {props.match.params.id}.</h1>
+			)}
+            <h3>
+                <Link to={'/'}>Go Back Home</Link>
+            </h3>
+        </div>
+    );
 }
