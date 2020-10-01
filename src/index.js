@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +11,7 @@ import {
 // import * as serviceWorker from './serviceWorker';
 
 const routes = [
-  
+
 ]
 
 ReactDOM.render(
