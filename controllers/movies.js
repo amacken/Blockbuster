@@ -13,6 +13,13 @@ router.get('/', (req, res) => {
 });
 
 // Delete
+router.delete('/:id', (req, res) => {
+    Movie.findByIdAndRemove(req.params.id, (error, movie) => {
+        error ?
+        res.status(404).json(error):
+        res.status(200).json(movie)
+    });
+});
 
 // Update
 
