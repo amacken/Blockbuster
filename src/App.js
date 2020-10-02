@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
+import { Route, Switch } from "react-router-dom";
+import axios from "axios";
 
-import MovieInfo from "../MovieInfo/MovieInfo";
+import MovieInfo from "./components/MovieInfo/MovieInfo";
+import Show from './components/Show/Show';
+import Edit from './components/Edit/Edit';
 import './App.css';
 
 function App(props) {
@@ -39,6 +42,25 @@ function App(props) {
 			searchURL: `${query.baseURL}${query.apiKey}${query.option}${query.title}`
 		});
 	};
+
+	const routes = [
+		{
+		  path: '/',
+		  component: App,
+		  name: 'Home'
+		},
+		{
+		  path: '/:id/edit',
+		  component: Edit,
+		  name: 'Edit'
+		},
+		{
+		  path: '/:id',
+		  component: Show,
+		  name: 'Show'
+		}
+	  ];
+
   return (
     <div className="Page-wrapper">
 			<h1>Blockbuster</h1>
