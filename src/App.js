@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 // import { Route, Switch } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import NavBar from "./components/NavBar/NavBar";
@@ -48,6 +48,20 @@ function App(props) {
 				password: state.password,
 			});
 			console.log(response);
+			localStorage.token = response.data.token;
+			setIsLoggedIn(true);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const handleLogIn = async (event) => {
+		event.preventDefault();
+		try {
+			const response = await axios.post("http://localhost:3001/users/login", {
+				email: state.email,
+				password: state.password,
+			});
 			localStorage.token = response.data.token;
 			setIsLoggedIn(true);
 		} catch (error) {
