@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import NavBar from "./components/NavBar/NavBar";
+import SignUp from "./components/SignUp/SignUp";
 import Show from './components/Show/Show';
 import Edit from './components/Edit/Edit';
 import './App.css';
