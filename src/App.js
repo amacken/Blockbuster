@@ -27,6 +27,15 @@ function App(props) {
 		}
 	}, [isLoggedIn]);
 
+	const handleLogOut = () => {
+		setState({
+			email: "",
+			password: "",
+			isLoggedIn: false,
+		});
+		localStorage.clear();
+	};
+
 	const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '930a61fb',
