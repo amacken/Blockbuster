@@ -36,6 +36,25 @@ function App(props) {
 		localStorage.clear();
 	};
 
+	const handleInput = (event) => {
+		setState({ ...state, [event.target.name]: event.target.value });
+	};
+
+	const handleSignUp = async (event) => {
+		event.preventDefault();
+		try {
+			const response = await axios.post("http://localhost:3001/users/signup", {
+				email: state.email,
+				password: state.password,
+			});
+			console.log(response);
+			localStorage.token = response.data.token;
+			setIsLoggedIn(true);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '930a61fb',
