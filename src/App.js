@@ -11,13 +11,29 @@ import Edit from './components/Edit/Edit';
 import './App.css';
 
 function App(props) {
-  const [query, updateQuery] = useState({
+	const [state, setState] = useState({
+		email: "",
+		password: "",
+		isLoggedIn: false,
+	});
+
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+	useEffect(() => {
+		if (localStorage.token) {
+			setIsLoggedIn(true);
+		} else {
+			setIsLoggedIn(false);
+		}
+	}, [isLoggedIn]);
+
+	const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '930a61fb',
 		option: '&t=',
 		title: '',
 		searchURL: ''
-  });
+  	});
 
   const [movie, updateMovie] = useState({})
   useEffect(() => {
@@ -66,8 +82,7 @@ function App(props) {
 
   return (
     <div className="Page-wrapper">
-		{/* <NavBar isLoggedIn={isLoggedIn} /> */}
-		<NavBar />
+		<NavBar isLoggedIn={isLoggedIn} />
 		<h1>Blockbuster</h1>
 		<form onSubmit={handleSubmit}>
 			<label htmlFor="title">Title</label>
