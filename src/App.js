@@ -64,19 +64,21 @@ function App(props) {
 
   return (
     <div className="Page-wrapper">
-			<h1>Blockbuster</h1>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="title">Title</label>
-				<input
-					id="title"
-					type="text"
-					value={query.title}
-					onChange={handleChange}
-				/>
-				<input type="submit" value="Search For Movie" />
-			</form>
-			{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
-		</div>
+		{/* <NavBar isLoggedIn={isLoggedIn} /> */}
+		<NavBar />
+		<h1>Blockbuster</h1>
+		<form onSubmit={handleSubmit}>
+			<label htmlFor="title">Title</label>
+			<input
+				id="title"
+				type="text"
+				value={query.title}
+				onChange={handleChange}
+			/>
+			<input type="submit" value="Search For Movie" />
+		</form>
+		{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
+	</div>
   );
 }
 
