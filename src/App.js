@@ -134,6 +134,14 @@ function App(props) {
 						);
 					}}
 				/>
+				<Route
+					path="/logout"
+					render={(props) => {
+						return (
+							<LogOut isLoggedIn={isLoggedIn} handleLogOut={handleLogOut} />
+						);
+					}} 
+				/>
 			</Switch>
 		</div>
 	</div>
