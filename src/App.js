@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-// import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 import MovieInfo from "./components/MovieInfo/MovieInfo";
@@ -104,39 +104,37 @@ function App(props) {
 		});
 	};
 
-	// const routes = [
-	// 	{
-	// 	  path: '/',
-	// 	  component: App,
-	// 	  name: 'Home'
-	// 	},
-	// 	{
-	// 	  path: '/:id/edit',
-	// 	  component: Edit,
-	// 	  name: 'Edit'
-	// 	},
-	// 	{
-	// 	  path: '/:id',
-	// 	  component: Show,
-	// 	  name: 'Show'
-	// 	}
-	//   ];
-
   return (
     <div className="Page-wrapper">
 		<NavBar isLoggedIn={isLoggedIn} />
-		<h1>Blockbuster</h1>
-		<form onSubmit={handleSubmit}>
-			<label htmlFor="title">Title</label>
-			<input
-				id="title"
-				type="text"
-				value={query.title}
-				onChange={handleChange}
-			/>
-			<input type="submit" value="Search For Movie" />
-		</form>
-		{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
+		<br/>
+		<div className="body">
+			<form onSubmit={handleSubmit}>
+				<label htmlFor="title">Title</label>
+				<input
+					id="title"
+					type="text"
+					value={query.title}
+					onChange={handleChange}
+				/>
+				<input type="submit" value="Search For Movie" />
+			</form>
+			{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
+			<Switch>
+				<Route 
+					path="/signup"
+					render={(props) => {
+						return (
+							<SignUp 
+								isLoggedIn={isLoggedIn}
+								handleInput={handleInput}
+								handleSignUp={handleSignUp}
+							/>
+						);
+					}}
+				/>
+			</Switch>
+		</div>
 	</div>
   );
 }
