@@ -6,6 +6,7 @@ import MovieInfo from "./components/MovieInfo/MovieInfo";
 import NavBar from "./components/NavBar/NavBar";
 import SignUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn/LogIn";
+import LogOut from "./components/LogOut/LogOut";
 import Show from './components/Show/Show';
 import Edit from './components/Edit/Edit';
 import './App.css';
