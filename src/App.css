@@ -1,6 +1,12 @@
+* {
+  /* background-color: blue; */
+  border: 1px solid red;
+}
+
 .Page-wrapper {
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
   align-items: center;
+  padding: 20px;
 }

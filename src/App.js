@@ -110,7 +110,7 @@ function App(props) {
 		<NavBar isLoggedIn={isLoggedIn} />
 		<br/>
 		<div className="body">
-			<form onSubmit={handleSubmit}>
+			{/* <form onSubmit={handleSubmit}>
 				<label htmlFor="title">Title</label>
 				<input
 					id="title"
@@ -119,8 +119,8 @@ function App(props) {
 					onChange={handleChange}
 				/>
 				<input type="submit" value="Search For Movie" />
-			</form>
-			{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
+			</form> */}
+			{/* {Object.keys(movie).length > 0 && <MovieInfo movie={movie} />} */}
 			<Switch>
 				<Route 
 					path="/signup"
