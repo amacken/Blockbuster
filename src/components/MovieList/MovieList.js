@@ -7,7 +7,6 @@ const MovieList = (props) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    // Need to wrap this in an async function to use await inside:
     async function fetchData() {
       const response = await axios.get("http://localhost:3001/api/movies");
       setMovies(response.data);
