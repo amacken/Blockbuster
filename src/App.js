@@ -4,6 +4,7 @@ import axios from "axios";
 
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import NavBar from "./components/NavBar/NavBar";
+import MovieList from "./components/MovieList/MovieList";
 import SignUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn/LogIn";
 import LogOut from "./components/LogOut/LogOut";
