@@ -126,11 +126,7 @@ function App(props) {
 					path="/signup"
 					render={(props) => {
 						return (
-							<SignUp 
-								isLoggedIn={isLoggedIn}
-								handleInput={handleInput}
-								handleSignUp={handleSignUp}
-							/>
+							<SignUp isLoggedIn={isLoggedIn} handleInput={handleInput} handleSignUp={handleSignUp} />
 						);
 					}}
 				/>
@@ -141,6 +137,14 @@ function App(props) {
 							<LogOut isLoggedIn={isLoggedIn} handleLogOut={handleLogOut} />
 						);
 					}} 
+				/>
+				<Route 
+					path="/login"
+					render={(props) => {
+						return (
+							<LogIn isLoggedIn={isLoggedIn} handleInput={handleInput} handleLogIn={handleLogIn} />
+						);
+					}}
 				/>
 			</Switch>
 		</div>
