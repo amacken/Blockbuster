@@ -147,6 +147,12 @@ function App(props) {
 						);
 					}}
 				/>
+				<Route 
+					path="/"
+					render={() =>{
+						return <MovieList isLoggedIn={isLoggedIn} />;
+					}}
+				/>
 			</Switch>
 		</div>
 	</div>

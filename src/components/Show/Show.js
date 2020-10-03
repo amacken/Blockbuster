@@ -27,7 +27,8 @@ export default function Show(props) {
 					</p>
 				</div>
 			) : (
-				<h1>Nothing found on {props.match.params.id}.</h1>
+                <h1>Nothing found</h1>
+				// <h1>Nothing found on {props.match.params.id}.</h1>
 			)}
 			<h3>
 				<Link to={'/'}>Go Back Home</Link>
