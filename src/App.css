@@ -1,6 +1,6 @@
 * {
   /* background-color: blue; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .Page-wrapper {
@@ -9,4 +9,11 @@
   border-radius: 2rem;
   align-items: center;
   padding: 20px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
 }
