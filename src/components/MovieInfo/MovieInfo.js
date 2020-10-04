@@ -8,7 +8,7 @@ export default function MovieInfo(props){
                 <img src={props.movie.Poster} alt={props.movie.Title} /><br/>
 				<h3>Genre: {props.movie.Genre}</h3><br/>
 				<h4>Plot: {props.movie.Plot}</h4><br/>
-				<h4>{props.movie.Runtime}</h4>
+				<h4>Runtime: {props.movie.Runtime}</h4>
             </div>
     )
 }

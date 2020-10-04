@@ -7,8 +7,49 @@
     padding: 10px;
 }
 
-/* .movie-info img {
-      width: 100%;
-      max-width: 20rem;
-      max-height: 20rem;
-} */
+@media only screen and (max-width: 375px) {
+      img {
+        max-width: 100%;
+        display: block;
+      }
+}
+    
+@media only screen and (max-width: 768px) {
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      h4 {
+            max-width: 550px;
+      }
+}
+    
+@media only screen and (max-width: 1024px) {
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      h4 {
+            max-width: 550px;
+      }
+}
+    
+@media only screen and (max-width: 1440px) {
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      h4 {
+            max-width: 550px;
+      }
+}
+    
+@media only screen and (min-width: 1441px) {
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      h4 {
+            max-width: 550px;
+      }
+}
