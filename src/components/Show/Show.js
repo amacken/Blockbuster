@@ -1,3 +1,22 @@
+import React from "react";
+
+function Show(props) {
+  const { Poster, Title, Year, Rated, Runtime } = props.movie;
+  return (
+    <div className="movie-preview">
+      <img src={Poster} alt={Title} className="movie-image" />
+      {props.isLoggedIn ? <h4>Title: {Title}</h4> : ""}
+      {props.isLoggedIn ? <h4>Year: {Year}</h4> : ""}
+      {props.isLoggedIn ? <h4>Rated: {Rated}</h4> : ""}
+      {props.isLoggedIn ? <h4>Runtime: {Runtime}</h4> : ""}
+    </div>
+  );
+}
+
+export default Show;
+
+
+
 // import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 // let endpoint = '/api';
@@ -38,21 +57,3 @@
 //         </div>
 //     )
 // }
-
-
-import React from "react";
-
-function Show(props) {
-  const { Poster, Title, Year, Rated, Released, Runtime, Genre, Director, Actors, Plot } = props.movie;
-  return (
-    <div className="movie-preview">
-      <img src={Poster} alt={Title} className="movie-image" />
-      {props.isLoggedIn ? <h4>Title: {Title}</h4> : ""}
-      {props.isLoggedIn ? <h4>Year: {Year}</h4> : ""}
-      {props.isLoggedIn ? <h4>Rated: {Rated}</h4> : ""}
-      {props.isLoggedIn ? <h4>Runtime: {Runtime}</h4> : ""}
-    </div>
-  );
-}
-
-export default Show;

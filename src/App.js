@@ -8,8 +8,6 @@ import MovieList from "./components/MovieList/MovieList";
 import SignUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn/LogIn";
 import LogOut from "./components/LogOut/LogOut";
-// import Show from './components/Show/Show';
-// import Edit from './components/Edit/Edit';
 import './App.css';
 
 function App(props) {
@@ -72,7 +70,7 @@ function App(props) {
 	};
 
 	const [query, updateQuery] = useState({
-		baseURL: 'http://www.omdbapi.com/?',
+		baseURL: 'https://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '930a61fb',
 		option: '&t=',
 		title: '',
