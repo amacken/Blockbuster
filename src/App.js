@@ -110,7 +110,7 @@ function App(props) {
     <div className="Page-wrapper">
 		<NavBar isLoggedIn={isLoggedIn} />
 		<br/>
-		<div className="body">
+		<div>
 			<form onSubmit={handleSubmit}>
 				<label htmlFor="title">Title</label>
 				<input
@@ -122,6 +122,8 @@ function App(props) {
 				<input type="submit" value="Search For Movie" />
 			</form>
 			{Object.keys(movie).length > 0 && <MovieInfo movie={movie} />}
+		</div>
+		<div className="body">
 			<Switch>
 				<Route 
 					path="/signup"
