@@ -1,7 +1,11 @@
-/* * {
-  background-color: blue;
-  border: 1px solid red;
-} */
+* {
+  /* background-color: blue;
+  border: 1px solid red; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
 
 .Page-wrapper {
   display: flex;
@@ -16,4 +20,17 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+}
+
+form {
+  padding: 5px;
+}
+
+form [type] {
+  background-color: seashell;
+  margin: 5px;
+}
+
+form [type="submit"] {
+  padding: 2px;
 }
