@@ -20,8 +20,15 @@
   padding: 10px;
 }
 
+.body div {
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+}
+
 form {
   padding: 5px;
+  margin: auto;
 }
 
 form [type] {
