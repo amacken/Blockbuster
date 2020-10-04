@@ -2,8 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: lightblue;
+  background-color: blue;
   font-family: 'Racing Sans One', cursive;
+  color: gold;
 }
 
 .Page-wrapper {
@@ -33,7 +34,7 @@ form {
 }
 
 form [type] {
-  background-color: seashell;
+  background-color: gray;
   margin: 5px;
 }
 

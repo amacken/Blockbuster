@@ -29,7 +29,7 @@ function NavBar(props) {
 
   return (
     <>
-      <h1>Blockbuster</h1>
+      <h1>BLOCKBUSTER</h1>
       <nav>
          <ul>{navBarItems}</ul>
       </nav>
